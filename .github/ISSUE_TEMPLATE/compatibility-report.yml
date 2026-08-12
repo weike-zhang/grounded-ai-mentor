@@ -1,0 +1,30 @@
+name: Compatibility report
+description: Report whether installation and invocation worked in an Agent Skills host.
+title: "[Compatibility]: "
+labels: [compatibility]
+body:
+  - type: input
+    id: host
+    attributes:
+      label: Host and version
+      placeholder: Codex App, Claude Code, Cursor, or another host
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Installed and triggered successfully
+        - Installed but did not trigger
+        - Installation failed
+        - Partially worked
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized steps and evidence
+      description: Include the command, observed result and any redacted error text.
+    validations:
+      required: true

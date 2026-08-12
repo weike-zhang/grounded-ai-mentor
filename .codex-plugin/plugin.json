@@ -20,7 +20,7 @@
     "brandColor": "#F24B22",
     "composerIcon": "./assets/icon.svg",
     "logo": "./assets/mascot-transparent.png",
-    "screenshots": ["./assets/hero.png"],
+    "screenshots": ["./assets/social-preview.png", "./assets/before-after.png"],
     "defaultPrompt": [
       "Use Grounded AI Mentor to explain what happens from clicking Login to receiving a result, without assuming I know the terms.",
       "Use Grounded AI Mentor to help me understand this project before changing it."

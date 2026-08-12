@@ -1,21 +1,26 @@
-# Model comparison: misunderstanding recovery
+# Pilot comparison: misunderstanding recovery
 
-Status: **one exploratory pair completed; not a benchmark**.
+Status: **one transparent pilot pair; not a benchmark**.
 
 - Date: 2026-08-12
 - Model: `gpt-5.6-sol`
 - Client: Codex CLI `0.147.0-alpha.6.5`
-- Scenario: learner still does not understand a port and asks for the earliest prerequisite plus a safe observation
-- Conditions: read-only, ephemeral, same user scenario; baseline was instructed not to read the Skill, treatment was instructed to read `SKILL.md` and the directly referenced teaching protocol
+- Scenario: a learner still does not understand a port and asks for the earliest prerequisite plus a safe observation
+- Conditions: read-only and ephemeral; the baseline did not read the Skill, while the treatment read `SKILL.md` and its teaching protocol
 
-| Observable criterion | Baseline | With Skill |
-| --- | ---: | ---: |
-| Identifies the earliest prerequisite instead of merely changing metaphor | 1/2 | 2/2 |
-| Defines the prerequisite and port without hidden dependencies | 1/2 | 2/2 |
-| Places the idea in an end-to-end system path | 1/2 | 2/2 |
-| Labels generic examples and avoids invented project evidence | 1/2 | 2/2 |
-| Provides a non-modifying observation | 2/2 | 2/2 |
-| Requests a prediction, location, or transfer check | 1/2 | 2/2 |
-| **Total** | **7/12 (58.3%)** | **12/12 (100%)** |
+## Published outputs
 
-The baseline answer was already accurate and safe. The observed improvement was narrower: the Skill explicitly defined `process`, showed the operating-system path, labeled the example generic, and asked the learner to predict and locate output before continuing. One pair cannot establish reliability or long-term learning. Raw outputs remain in the ignored local `evals/results/runs/` directory.
+- [Baseline response](pilot/baseline-misunderstanding.md)
+- [Response with Grounded AI Mentor](pilot/with-skill-misunderstanding.md)
+
+## What was observed
+
+| Behavior | Baseline | With Skill |
+| --- | --- | --- |
+| Earliest prerequisite | Introduces concurrent programs before the port definition | Explicitly names the running-process concept as the earliest gap |
+| System path | Explains IP, operating system and program routing | Opens with a compact end-to-end path, then expands it |
+| Generic evidence | Uses a clearly hypothetical command output | Explicitly labels the service map as a generic example |
+| Understanding check | Requests a real read-only observation | Requests a prediction before the observation and a locate-the-parts check afterward |
+| Safety | Accurate and read-only | Accurate and read-only |
+
+The baseline was already useful, accurate and safe. The narrower observed difference was that the Skill made the prerequisite, system path, evidence label and prediction step more explicit. One pair cannot establish reliability, compatibility across hosts or long-term learning gains.

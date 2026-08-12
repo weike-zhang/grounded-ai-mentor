@@ -1,17 +1,19 @@
 # Evaluation
 
-This suite is intentionally small and inspectable. It measures release claims that can be observed locally; it does not prove long-term learning outcomes.
+This repository separates release integrity from model behavior. Neither proves long-term learning outcomes.
 
-## Deterministic validation
+## Fixture integrity
 
 ```bash
-python evals/validate_dataset.py
+python evals/validate_fixtures.py
 ```
 
-It checks 24 trigger prompts (12 expected to trigger, 12 expected not to), eight scenario fixtures, rubric weights, required public files, and the privacy-state validator. The score is a fixture coverage score, not a model quality score.
+The script checks the shape and balance of 24 trigger fixtures, eight scenario fixtures, rubric weights and required release files. It reports checks passed, not a performance percentage. It does not invoke a model or test whether the Skill actually triggers.
 
-## Model comparison
+## Model behavior
 
-For a model run, record the exact model, client version, date, prompt, raw output, rubric score, and failure notes. Compare the same fixtures with and without the Skill. Keep the raw outputs private if they contain project material; publish only redacted excerpts and aggregate scores.
+Model comparisons must record the exact model, client version, date, prompt, full sanitized output, scoring method and failure notes. Compare the same scenario with and without the Skill.
 
-Current status: deterministic fixture validation is runnable. One exploratory model pair and its limitations are recorded in `results/model-comparison.md`; it is not a benchmark or evidence of long-term learning.
+Current status: one transparent pilot pair and its limitations are published in [results/model-comparison.md](results/model-comparison.md). It is not a benchmark, a compatibility claim or evidence of long-term learning.
+
+A future benchmark should run all eight scenarios in both conditions with repeated trials, publish sanitized raw outputs, report failures and avoid converting one successful example into a broad product claim.

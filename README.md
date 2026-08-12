@@ -1,83 +1,92 @@
 <div align="center">
-  <img src="assets/hero.png" alt="Grounded AI Mentor — learn computing and AI through real projects" width="100%">
+  <img src="assets/mascot-transparent.png" alt="Grounded AI Mentor flame mascot" width="132">
 
 # Grounded AI Mentor
 
-**Learn computer science and AI through the systems you are actually building.**
+**Learn computing and AI by tracing the real project in front of you—without hidden prerequisites or invented project details.**
 
-[简体中文](README.zh-CN.md) · [How it works](#how-it-works) · [Evaluation](#evaluation) · [Privacy](PRIVACY.md)
+[![Release](https://img.shields.io/github/v/release/weike-zhang/grounded-ai-mentor)](https://github.com/weike-zhang/grounded-ai-mentor/releases)
+[![Validate](https://github.com/weike-zhang/grounded-ai-mentor/actions/workflows/validate.yml/badge.svg)](https://github.com/weike-zhang/grounded-ai-mentor/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-F24B22.svg)](LICENSE)
+
+[简体中文](README.zh-CN.md) · [How it works](#how-it-works) · [Evidence](#evidence-status) · [Privacy](PRIVACY.md)
 
 </div>
 
-Grounded AI Mentor is a zero-assumption Agent Skill for learning computing, software engineering, and AI. It finds the earliest missing concept, places it in the whole system, connects it to authorized project evidence, and asks for proportionate proof of understanding before moving on.
+Grounded AI Mentor is an Agent Skill for people who are already building with AI but want to understand the computer science, software engineering and AI systems underneath their work. It finds the earliest missing concept, connects claims to authorized project evidence and checks whether the learner can use the idea before moving on.
 
-It is not a course dump, an answer bot, or permission to rewrite your project while you are trying to understand it.
+## Install and try it
 
-## Why it is different
+Install with the open Agent Skills CLI:
 
-| A typical answer | Grounded AI Mentor |
-| --- | --- |
-| Uses familiar-looking terms without checking prerequisites | Defines each new term without hidden prerequisites |
-| Gives an isolated explanation | Maps hardware → OS → network → app → data → AI |
-| Invents a plausible relationship to your project | Cites authorized files, logs, commands, screenshots, or your statements |
-| Treats explanation as mastery | Uses a small restate, prediction, observation, or transfer check |
-| Saves context silently | Persists local learner state only with consent |
+```bash
+npx skills add weike-zhang/grounded-ai-mentor \
+  --skill grounded-ai-mentor -g
+```
 
-## Quick start
-
-### Agent Skills-compatible clients
-
-Copy `skills/grounded-ai-mentor/` into your client's skills directory, restart the client if required, and ask:
+Then ask your agent:
 
 ```text
 Use $grounded-ai-mentor to explain what happens from clicking Login
-to the database returning a result. Define every new term.
+to the database returning a result. Define every new term and cite
+the project evidence behind each project-specific claim.
 ```
 
-### Codex plugin package
+See [docs/INSTALL.md](docs/INSTALL.md) for manual Codex installation, validation, update and uninstall paths.
 
-This repository is also packaged as a skills-only Codex plugin. During local testing, add the repository through a Codex plugin marketplace or copy the bundled Skill into your Codex skills directory. See [docs/INSTALL.md](docs/INSTALL.md) for verified and manual paths.
+## What changes in a lesson
 
-No API key, backend, or telemetry is required by the Skill itself.
+![Pilot comparison showing the baseline and the response with Grounded AI Mentor](assets/before-after.png)
 
-## Try these prompts
+In the published pilot, the baseline was already accurate and safe. With the Skill, the response made four behaviors more explicit:
 
-```text
-Use $grounded-ai-mentor to help me understand this repository before I change it.
-```
+- name the earliest prerequisite before defining the requested term;
+- show the compact end-to-end system path first;
+- label generic examples instead of implying project evidence;
+- ask for a prediction before a safe observation.
 
-```text
-I don't understand what an API is. Explain it from the user click to the saved data,
-then give me one safe observation I can make in my project.
-```
-
-```text
-Use $grounded-ai-mentor to diagnose this error. First inspect the evidence,
-then teach me the whole request path that caused it.
-```
+Read the [complete sanitized responses and limitations](evals/results/model-comparison.md). One pair is a transparent example, not a benchmark or proof of learning gains.
 
 ## How it works
 
-![Teaching flow](assets/teaching-flow.svg)
+![Grounded AI Mentor teaching flow](assets/teaching-flow.svg)
 
-1. Route the request as explanation, diagnosis, implementation, or planning.
+1. Route the request as explanation, diagnosis, implementation or planning.
 2. Start with existing evidence instead of an onboarding questionnaire.
-3. Ask related questions only when a real decision point is reached.
-4. Define the earliest missing prerequisite and place it in the system map.
-5. Ground project claims in evidence or label the example generic.
-6. Check understanding proportionately and preserve local state only with consent.
+3. Define the earliest missing prerequisite and place it in the system map.
+4. Ground project claims in files, logs, UI state or explicit user statements.
+5. Ask for one proportionate restate, prediction, observation or transfer check.
+6. Save local learner state only with explicit consent.
 
-See [examples/project-grounded-session.md](examples/project-grounded-session.md) and [examples/misunderstanding-recovery.md](examples/misunderstanding-recovery.md).
+The Skill does not turn a learning request into a code change, invent a plausible project stack or silently persist personal context.
+
+## Evidence status
+
+| Surface | Status | Evidence |
+| --- | --- | --- |
+| Skill structure | Verified | Skill validator and CI |
+| Skills CLI discovery | Verified | Repository discovery on 2026-08-12 |
+| Codex plugin manifest | Verified locally | Manifest validation |
+| Live teaching behavior | Pilot only | One complete baseline/Skill pair |
+| Other Agent Skills hosts | Unverified | Community compatibility reports welcome |
+
+Run the release-integrity checks:
+
+```bash
+python evals/validate_fixtures.py
+```
+
+These checks validate fixture structure and required files. They deliberately do not output a model-quality percentage. See [evals/README.md](evals/README.md) for the planned repeated evaluation design.
 
 ## Privacy by architecture
 
-The public repository contains a blank learner-profile template and fictional examples only. If a learner explicitly consents, private learning state belongs in:
+The public repository contains fictional examples and a blank learner-profile template. A real profile may be created only with explicit consent at:
 
 ```text
 .grounded-ai-mentor/learner-profile.md
 ```
 
-That path is ignored by default. The Skill supports viewing, correcting, exporting, and deleting the state. Run the bundled validator before sharing any profile:
+That path is ignored by default. Learners can view, correct, export or delete their state. Validate a profile before sharing it:
 
 ```bash
 python skills/grounded-ai-mentor/scripts/validate_state.py \
@@ -86,46 +95,23 @@ python skills/grounded-ai-mentor/scripts/validate_state.py \
 
 Read [PRIVACY.md](PRIVACY.md) before enabling persistence.
 
-## Evaluation
-
-The evaluation suite includes positive and negative trigger prompts, multi-turn teaching scenarios, privacy and authorization cases, and a rubric for with-Skill versus without-Skill comparison.
-
-```bash
-python evals/validate_dataset.py
-```
-
-Published scores are accepted only with raw prompts, run conditions, model, date, and limitations. The first release evaluates observable teaching behavior; it does **not** claim proven long-term learning gains. See [evals/README.md](evals/README.md).
-
-## Compatibility
-
-| Surface | Status | Evidence |
-| --- | --- | --- |
-| Agent Skills folder format | Verified | Skill structure validation |
-| Codex skills-only plugin | Verified locally | Plugin manifest validation |
-| Codex live teaching behavior | Exploratory pair completed | One recorded pair; not a benchmark |
-| Claude Code and other compatible clients | Unverified | Community testing welcome |
-
-Compatibility labels are deliberately conservative.
-
 ## Repository map
 
 ```text
-skills/grounded-ai-mentor/  # the installable Skill
-examples/                   # fictional, reproducible teaching examples
-evals/                      # prompts, rubric, runner guidance and results
-assets/                     # mascot, hero and diagrams
-docs/                       # installation and author notes
-release/                    # v0.1.0 launch-ready copy
+skills/grounded-ai-mentor/  installable Skill
+examples/                   fictional teaching examples
+evals/                      fixtures, rubric and transparent pilot output
+assets/                     mascot, social preview and diagrams
+docs/                       installation instructions
+release/                    public release notes
 ```
 
 ## Contributing
 
-The most useful contribution is a reproducible teaching failure: an undefined term, an invented project claim, a premature action, or a case where the learner still cannot transfer the idea. See [CONTRIBUTING.md](CONTRIBUTING.md).
+The most useful contribution is a reproducible teaching failure: an undefined term, invented project evidence, premature action or a case where the learner still cannot transfer the idea. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## License and mascot
+## License and visual assets
 
-Code and documentation are released under the [MIT License](LICENSE).
-
-The mascot is a user-provided asset. Its public modification and redistribution permission must be confirmed before the first public push; until then, the generated visual files are local release candidates, not licensed public assets. See [assets/ASSET-NOTICE.md](assets/ASSET-NOTICE.md).
+Code and documentation use the [MIT License](LICENSE). The project author has confirmed the right to publish and redistribute the mascot as part of Grounded AI Mentor. Mascot-derived visuals are not separately licensed under MIT for reuse outside this project; see [assets/ASSET-NOTICE.md](assets/ASSET-NOTICE.md).
 
 Built by [Weike Zhang](https://github.com/weike-zhang).

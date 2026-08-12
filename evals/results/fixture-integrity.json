@@ -1,5 +1,5 @@
 {
-  "suite": "grounded-ai-mentor",
+  "suite": "grounded-ai-mentor-fixture-integrity",
   "version": "0.1.0",
   "checks": {
     "trigger_prompt_count": true,
@@ -9,6 +9,8 @@
     "rubric_weights_sum_to_one": true,
     "required_release_files": true
   },
-  "score": 100.0,
-  "interpretation": "fixture coverage only; not a claim of model teaching quality"
+  "passed_checks": 6,
+  "total_checks": 6,
+  "all_passed": true,
+  "interpretation": "Structure and release-integrity checks only; no model behavior or learning outcome is scored."
 }

@@ -1,20 +1,15 @@
-# Mascot asset notice
+# Visual asset notice
 
-The flame mascot was supplied by the project author during development.
+The project author has confirmed the right to publish, modify and redistribute the flame mascot as part of Grounded AI Mentor.
 
-The final transparent asset was produced from that supplied image by removing only the near-white background connected to the canvas edge. The character, expression, proportions and eye whites were preserved. `scripts/process_mascot.py` makes that transformation reproducible; `scripts/build_visuals.py` places the approved transparent asset into the repository Hero.
+The repository's MIT License covers code and documentation. It does **not** grant a separate license to reuse the mascot or mascot-derived visual assets outside this project. Those assets include:
 
-An AI image-edit attempt used the prompt below, but it altered the character and was rejected; no generated pixels from that attempt are included in the final assets:
+- `mascot-transparent.png`;
+- `icon.svg`;
+- `social-preview.png`;
+- `before-after.png` and `before-after.zh-CN.png`;
+- other project graphics that visibly incorporate the mascot.
 
-```text
-Edit the supplied flame mascot image only: preserve the character exactly, replace the white background with a uniform chroma green background, do not redraw, resize, crop, or add elements.
-```
+The transparent mascot preserves the supplied character artwork and removes only its connected near-white background. `scripts/process_mascot.py` documents that transformation, and `scripts/build_visuals.py` creates the repository graphics without redrawing the mascot.
 
-Before public release, the author must confirm that they own or have permission to publish, modify, and redistribute the original image. Until that confirmation is recorded, the following files are local release candidates and are not granted under the repository's MIT License:
-
-- `mascot-source.png`
-- `mascot-transparent.png`
-- `hero.png`
-- social images or animations derived from the mascot
-
-The simplified `icon.svg` is also derived from the supplied character and follows the same restriction until permission is confirmed.
+For reuse outside Grounded AI Mentor, contact the project author.

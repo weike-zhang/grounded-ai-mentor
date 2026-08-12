@@ -1,0 +1,39 @@
+name: Teaching failure
+description: Report a reproducible case where the Skill did not teach safely or clearly.
+title: "[Teaching failure]: "
+labels: [teaching-failure]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, private project data or unredacted personal information.
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Sanitized prompt or scenario
+      description: Provide the smallest reproducible prompt and relevant context.
+    validations:
+      required: true
+  - type: dropdown
+    id: failure
+    attributes:
+      label: Failure type
+      options:
+        - Undefined prerequisite or term
+        - Invented project evidence
+        - Premature modification or unsafe action
+        - Missing understanding check
+        - Misunderstanding was not repaired
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Host and model
+      placeholder: Codex App, model name, version if known
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true

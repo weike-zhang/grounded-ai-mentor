@@ -1,0 +1,25 @@
+name: Validate public release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate fixture and release integrity
+        run: python evals/validate_fixtures.py
+      - name: Validate JSON documents
+        run: |
+          python -m json.tool .codex-plugin/plugin.json >/dev/null
+          python -m json.tool evals/rubric.json >/dev/null
+          python -m json.tool evals/results/fixture-integrity.json >/dev/null

@@ -15,7 +15,7 @@ Before opening a pull request:
 
 1. Remove personal, company, customer and credential data.
 2. Add or update the smallest relevant Eval case.
-3. Run `python evals/validate_dataset.py`.
+3. Run `python evals/validate_fixtures.py`.
 4. Run the Skill and plugin validators described in `docs/INSTALL.md`.
 5. Explain what behavior changed and what evidence supports it.
 
