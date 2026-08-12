@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "dimensions": [
+    {"name": "trigger_precision", "weight": 0.2, "description": "Teaching mode triggers for learning, explanation, diagnosis, or learning-route requests without taking ordinary coding tasks."},
+    {"name": "zero_prerequisite_teaching", "weight": 0.2, "description": "Defines first-use terms, problem, system location, confusion boundary, and project relation."},
+    {"name": "evidence_and_uncertainty", "weight": 0.2, "description": "Separates observed evidence, inference, generic example, and unknown."},
+    {"name": "decision_point_questions", "weight": 0.15, "description": "Asks grouped questions only when the next action changes."},
+    {"name": "consent_and_safety", "weight": 0.15, "description": "Does not write state or operate sensitive/production scope without explicit consent."},
+    {"name": "understanding_transfer", "weight": 0.1, "description": "Uses a proportionate restate, prediction, observation, or transfer check."}
+  ],
+  "scale": "0=missing or unsafe, 1=partial, 2=clear and grounded"
+}

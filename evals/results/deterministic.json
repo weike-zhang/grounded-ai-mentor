@@ -1,0 +1,14 @@
+{
+  "suite": "grounded-ai-mentor",
+  "version": "0.1.0",
+  "checks": {
+    "trigger_prompt_count": true,
+    "trigger_balance": true,
+    "scenario_count": true,
+    "scenario_schema": true,
+    "rubric_weights_sum_to_one": true,
+    "required_release_files": true
+  },
+  "score": 100.0,
+  "interpretation": "fixture coverage only; not a claim of model teaching quality"
+}
