@@ -6,6 +6,7 @@ Status: **one transparent pilot pair; not a benchmark**.
 - Model: `gpt-5.6-sol`
 - Client: Codex CLI `0.147.0-alpha.6.5`
 - Scenario: a learner still does not understand a port and asks for the earliest prerequisite plus a safe observation
+- Exact user prompt: `我还是不明白什么是端口。请不要换一个花哨比喻，回到最早的前置概念并让我做一个安全观察。`
 - Conditions: read-only and ephemeral; the baseline did not read the Skill, while the treatment read `SKILL.md` and its teaching protocol
 
 ## Published outputs
