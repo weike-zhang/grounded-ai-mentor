@@ -2,7 +2,7 @@
 
 ## 推荐：Agent Skills CLI
 
-下面的公网命令要等远程仓库得到授权并改名为 `grounded-ai-tutor` 后才会生效。在此之前请从当前本地检出安装。
+下面的公网命令已于 2026-08-13 从干净临时项目验证。见[脱敏后的安装记录](../evals/results/public-install-v0.2.0.md)。
 
 ```bash
 npx skills add weike-zhang/grounded-ai-tutor \

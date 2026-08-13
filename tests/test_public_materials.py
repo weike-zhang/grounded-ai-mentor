@@ -61,6 +61,10 @@ class PublicMaterialsTests(unittest.TestCase):
         for text in (english, chinese):
             self.assertNotIn("Grounded AI Mentor", text)
             self.assertNotIn("grounded-ai-mentor", text)
+            self.assertNotIn("awaits the repository rename", text)
+            self.assertNotIn("等待远程仓库改名", text)
+        self.assertIn("evals/results/public-install-v0.2.0.md", english)
+        self.assertIn("evals/results/public-install-v0.2.0.md", chinese)
 
     def test_bilingual_comparisons_keep_the_evidence_limit_nearby(self):
         english = self.read("README.md")

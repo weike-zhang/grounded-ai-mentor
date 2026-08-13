@@ -2,7 +2,7 @@
 
 ## Recommended: Agent Skills CLI
 
-The public commands below become available after the authorized repository rename to `grounded-ai-tutor`. Until then, install from the current local checkout.
+The public command below was verified from a clean temporary project on 2026-08-13. See the [sanitized install record](../evals/results/public-install-v0.2.0.md).
 
 ```bash
 npx skills add weike-zhang/grounded-ai-tutor \

@@ -23,6 +23,7 @@ REQUIRED_FILES = [
     "examples/project-grounded-session.md",
     "tests/test_validate_state.py",
     "evals/results/project-grounded-comparison.md",
+    "evals/results/public-install-v0.2.0.md",
     "evals/results/pilot/baseline-project-bundle-safety.md",
     "evals/results/pilot/with-skill-project-bundle-safety.md",
     "release/v0.2.0.json",

@@ -32,7 +32,7 @@ Read the [complete baseline](evals/results/pilot/baseline-misunderstanding.md), 
 
 ## Start with the concept that lost you
 
-The public install command below becomes available after the authorized remote rename to `grounded-ai-tutor`; use the current local checkout until then.
+The public install command below was verified from a clean temporary project on 2026-08-13.
 
 Install with the open Agent Skills CLI:
 
@@ -109,7 +109,7 @@ The Skill is not trying to make every answer longer. It is trying to stop at the
 | Surface | Status | Evidence |
 | --- | --- | --- |
 | Skill structure | Verified | Skill validator and CI |
-| Skills CLI discovery | Partially verified | Local checkout verified; public discovery awaits the repository rename |
+| Skills CLI discovery | Verified publicly | [Clean temporary-project verification](evals/results/public-install-v0.2.0.md) |
 | Codex plugin manifest | Verified locally | Manifest validation |
 | Live teaching behavior | Exploratory only | Two complete pairs; one uses exact project files |
 | Other Agent Skills hosts | Unverified | Community compatibility reports welcome |

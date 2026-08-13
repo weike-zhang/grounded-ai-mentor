@@ -37,7 +37,7 @@
     "The blank learner-profile template remains unauthorized for persistence even when its structure and sensitive-pattern scan pass."
   ],
   "compatibility": [
-    "Skills CLI discovery from the renamed local checkout found the `grounded-ai-tutor` Skill on 2026-08-13; public discovery awaits the remote repository rename.",
+    "Public Skills CLI discovery found and copied the `grounded-ai-tutor` Skill on 2026-08-13; see the [sanitized verification record](https://github.com/weike-zhang/grounded-ai-tutor/blob/v0.2.0/evals/results/public-install-v0.2.0.md).",
     "The bundled validator is verified with Python 3.12 in GitHub Actions.",
     "Other Agent Skills hosts remain unverified; compatibility reports are welcome."
   ],
