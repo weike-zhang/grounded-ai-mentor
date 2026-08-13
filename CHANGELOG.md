@@ -9,6 +9,12 @@
 - Run state-validator tests in CI and align the plugin manifest with the public release version.
 - Add a real-project teaching comparison that exercises file-based evidence rather than only a generic concept explanation.
 
+## 0.1.1 — 2026-08-12
+
+- Recorded the exact pilot prompt with complete sanitized outputs and explicit limitations.
+- Published `grounded-ai-mentor-v0.1.1.zip` as the Release asset.
+- The tagged plugin manifest still reported `0.1.0`; v0.1.2 corrects the metadata and records this release-history limitation.
+
 ## 0.1.0 — 2026-08-12
 
 - Added the zero-assumption, project-grounded teaching protocol.
