@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a local Grounded AI Mentor learner profile without echoing secrets."""
+"""Validate a local Grounded AI Tutor learner profile without echoing secrets."""
 
 from __future__ import annotations
 

@@ -1,16 +1,18 @@
 {
-  "suite": "grounded-ai-mentor-fixture-integrity",
-  "version": "0.1.2",
+  "suite": "grounded-ai-tutor-fixture-integrity",
+  "version": "0.2.0",
   "checks": {
     "trigger_prompt_count": true,
     "trigger_balance": true,
     "scenario_count": true,
     "scenario_schema": true,
     "rubric_weights_sum_to_one": true,
-    "required_release_files": true
+    "required_release_files": true,
+    "release_version_alignment": true,
+    "release_page_matches_spec": true
   },
-  "passed_checks": 6,
-  "total_checks": 6,
+  "passed_checks": 8,
+  "total_checks": 8,
   "all_passed": true,
   "interpretation": "Structure and release-integrity checks only; no model behavior or learning outcome is scored."
 }

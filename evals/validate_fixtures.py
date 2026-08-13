@@ -16,8 +16,8 @@ REQUIRED_FILES = [
     "LICENSE",
     "PRIVACY.md",
     "SECURITY.md",
-    "skills/grounded-ai-mentor/SKILL.md",
-    "skills/grounded-ai-mentor/agents/openai.yaml",
+    "skills/grounded-ai-tutor/SKILL.md",
+    "skills/grounded-ai-tutor/agents/openai.yaml",
     "assets/social-preview.png",
     "assets/teaching-flow.svg",
     "examples/project-grounded-session.md",
@@ -25,6 +25,9 @@ REQUIRED_FILES = [
     "evals/results/project-grounded-comparison.md",
     "evals/results/pilot/baseline-project-bundle-safety.md",
     "evals/results/pilot/with-skill-project-bundle-safety.md",
+    "release/v0.2.0.json",
+    "release/v0.2.0.md",
+    "tests/test_public_materials.py",
 ]
 
 
@@ -37,6 +40,9 @@ def main() -> int:
         if line.strip()
     ]
     rubric = json.loads((ROOT / "evals/rubric.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
+    release_spec = json.loads((ROOT / "release/v0.2.0.json").read_text(encoding="utf-8"))
+    release_page = (ROOT / "release/v0.2.0.md").read_text(encoding="utf-8")
     triggered = sum(row["should_trigger"] == "true" for row in rows)
     not_triggered = sum(row["should_trigger"] == "false" for row in rows)
     checks = {
@@ -51,11 +57,21 @@ def main() -> int:
             sum(item["weight"] for item in rubric["dimensions"]), 1.0, abs_tol=1e-9
         ),
         "required_release_files": all((ROOT / path).is_file() for path in REQUIRED_FILES),
+        "release_version_alignment": (
+            manifest["version"] == release_spec["version"] == "0.2.0"
+            and f"v{release_spec['version']}" in release_page.splitlines()[0]
+        ),
+        "release_page_matches_spec": (
+            release_spec["title"] in release_page.splitlines()[0]
+            and release_spec["summary"] in release_page
+            and release_spec["release_asset"] in release_page
+            and all(command in release_page for command in release_spec["install_or_update"])
+        ),
     }
     passed = sum(checks.values())
     result = {
-        "suite": "grounded-ai-mentor-fixture-integrity",
-        "version": "0.1.2",
+        "suite": "grounded-ai-tutor-fixture-integrity",
+        "version": "0.2.0",
         "checks": checks,
         "passed_checks": passed,
         "total_checks": len(checks),

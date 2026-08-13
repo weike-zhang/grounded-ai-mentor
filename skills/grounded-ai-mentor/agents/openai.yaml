@@ -1,7 +1,0 @@
-interface:
-  display_name: "Grounded AI Mentor"
-  short_description: "用真实项目和理解证据逐层学习计算机、软件工程与 AI"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/mascot-transparent.png"
-  brand_color: "#F24B22"
-  default_prompt: "Use $grounded-ai-mentor to teach me this concept through my real project without assuming prior knowledge."

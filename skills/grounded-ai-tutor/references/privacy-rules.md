@@ -20,7 +20,7 @@ Never promote an inference to a confirmed fact silently.
 
 ## Local storage
 
-Use `.grounded-ai-mentor/learner-profile.md`. Add `.grounded-ai-mentor/` to the project ignore file before storing state. Avoid global profiles unless the user specifically asks for one and understands its scope.
+Use `.grounded-ai-tutor/learner-profile.md`. Add `.grounded-ai-tutor/` to the project ignore file before storing state. Avoid global profiles unless the user specifically asks for one and understands its scope.
 
 ## User control
 

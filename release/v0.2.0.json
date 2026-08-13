@@ -1,0 +1,50 @@
+{
+  "project_name": "Grounded AI Tutor",
+  "version": "0.2.0",
+  "title": "The tutor comes first, and project evidence stays optional",
+  "summary": "v0.2.0 renames the project and Skill from Grounded AI Mentor to Grounded AI Tutor. The README now starts with the tutor's lasting job: find the first prerequisite an explanation skipped and teach from there without assuming a technical background. Real project evidence remains available when it improves a lesson, but it is no longer presented as the product's main identity. This release also separates sensitive-data scanning from consent and publishes a second project-grounded comparison without claiming an accuracy win.",
+  "visuals": [
+    {
+      "alt": "The same port question answered normally and with Grounded AI Tutor",
+      "url": "https://github.com/weike-zhang/grounded-ai-tutor/raw/v0.2.0/assets/before-after.png",
+      "caption": "For the same port question, the baseline was already accurate. The Skill first repaired the missing running-program concept, then asked the learner to predict a safe command's result and locate the program and port afterward. One exploratory pair cannot prove learning gains."
+    }
+  ],
+  "upgrade_if": [
+    "You want the tutor-first `grounded-ai-tutor` name and invocation instead of the older project-first identity.",
+    "You use or review `.grounded-ai-tutor/learner-profile.md`; v0.2.0 removes a result that could be misread as permission to persist or share the file."
+  ],
+  "defer_if": [
+    "You only read the historical teaching examples and do not install the Skill; those examples remain available in v0.1.1.",
+    "You need benchmarked learning outcomes or verified support across Agent Skills hosts; this release does not establish either."
+  ],
+  "highlights": [
+    "Renames the project, repository target and Skill ID to Grounded AI Tutor and `grounded-ai-tutor`.",
+    "Rebuilds both README openings around the tutor's core job and presents project evidence as an optional teaching mode.",
+    "Removes the misleading `safe_to_share` result and reports consent, detected sensitive data and persistence validity as separate facts.",
+    "Adds regression tests for blank state, explicit consent and sensitive-data rejection without echoing matched content.",
+    "Adds a second exploratory comparison that cites a real release bundler, tests and documented failure with permanent source links.",
+    "Updates both comparison visuals so the baseline and Skill sides show the same learner task in user-readable language."
+  ],
+  "install_or_update": [
+    "npx skills add weike-zhang/grounded-ai-tutor --skill grounded-ai-tutor -g",
+    "npx skills update grounded-ai-tutor -g -y"
+  ],
+  "verification": [
+    "`python3 -m unittest discover -s tests -v` — 9 of 9 state-validator and public-material contract tests passed.",
+    "`python3 evals/validate_fixtures.py` — 8 of 8 release-integrity checks passed; this is not a model-quality score.",
+    "Local release audit — 43 Markdown links checked, with 0 secret-pattern findings and 0 public-surface blockers or warnings.",
+    "The blank learner-profile template remains unauthorized for persistence even when its structure and sensitive-pattern scan pass."
+  ],
+  "compatibility": [
+    "Skills CLI discovery from the renamed local checkout found the `grounded-ai-tutor` Skill on 2026-08-13; public discovery awaits the remote repository rename.",
+    "The bundled validator is verified with Python 3.12 in GitHub Actions.",
+    "Other Agent Skills hosts remain unverified; compatibility reports are welcome."
+  ],
+  "limitations": [
+    "The two published comparisons are exploratory pairs, not a benchmark or proof of long-term learning gains.",
+    "The project-grounded pair showed a clearer system path but no material accuracy advantage over an already strong baseline.",
+    "A clean configured-pattern scan does not grant permission to persist or share learner state."
+  ],
+  "release_asset": "grounded-ai-tutor-v0.2.0.zip"
+}

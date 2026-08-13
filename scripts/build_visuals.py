@@ -60,15 +60,6 @@ def mascot(max_size: tuple[int, int]) -> Image.Image:
     return image
 
 
-def pill(draw: ImageDraw.ImageDraw, left: int, top: int, label: str) -> int:
-    label_font = font(22, True)
-    bounds = draw.textbbox((0, 0), label, font=label_font)
-    width = bounds[2] - bounds[0] + 40
-    draw.rounded_rectangle((left, top, left + width, top + 48), radius=24, fill=CREAM)
-    draw.text((left + 20, top + 10), label, font=label_font, fill="#B83B1D")
-    return width
-
-
 def build_social_preview() -> None:
     width, height = 1280, 640
     image = gradient(width, height)
@@ -76,17 +67,21 @@ def build_social_preview() -> None:
     draw.rounded_rectangle((68, 58, 324, 108), radius=25, fill=NAVY_LIGHT)
     draw.text((94, 70), "OPEN AGENT SKILL", font=font(22, True), fill=GOLD)
     draw.text((68, 158), "Grounded", font=font(76, True), fill="white")
-    draw.text((68, 242), "AI Mentor", font=font(76, True), fill="white")
+    draw.text((68, 242), "AI Tutor", font=font(76, True), fill="white")
     draw.multiline_text(
         (74, 354),
-        "Learn computing and AI through\nthe real project in front of you.",
+        "Starts with what you know.\nExplains the step you are missing.",
         font=font(31),
         fill=MUTED,
         spacing=10,
     )
-    left = 72
-    for label in ("Evidence first", "No hidden prerequisites", "Consent-aware"):
-        left += pill(draw, left, 510, label) + 14
+    draw.rounded_rectangle((72, 510, 666, 566), radius=28, fill=CREAM)
+    draw.text(
+        (96, 525),
+        "No technical background required.",
+        font=font(21, True),
+        fill="#B83B1D",
+    )
     character = mascot((500, 500))
     character_position = (width - character.width - 48, 82)
     glow = Image.new("RGBA", character.size, (242, 75, 34, 0))
@@ -143,7 +138,7 @@ def build_comparisons() -> None:
         title="Same port question, different learning path",
         subtitle="The baseline was already correct; this shows the extra learning steps",
         left_label="Regular answer",
-        right_label="With mentor Skill",
+        right_label="With tutor Skill",
         left_text=(
             "• Explains ports directly\n"
             "• Gives a safe read-only command\n"
@@ -160,7 +155,7 @@ def build_comparisons() -> None:
         title="同一个“端口”问题，学习过程有什么不同",
         subtitle="基线回答已经准确；这里展示 Skill 增加的学习步骤",
         left_label="普通回答",
-        right_label="启用导师 Skill",
+        right_label="启用 Tutor Skill",
         left_text="• 直接解释端口\n• 给出安全的只读命令\n• 请用户观察结果",
         right_text=(
             "• 先补“正在运行的程序”\n"

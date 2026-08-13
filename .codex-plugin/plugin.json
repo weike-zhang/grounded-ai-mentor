@@ -1,19 +1,19 @@
 {
-  "name": "grounded-ai-mentor",
-  "version": "0.1.2",
-  "description": "A zero-assumption computer science and AI mentor grounded in the projects learners actually build.",
+  "name": "grounded-ai-tutor",
+  "version": "0.2.0",
+  "description": "A zero-assumption AI tutor for computing and AI that uses authorized project evidence only when it improves the lesson.",
   "author": {
     "name": "Weike Zhang",
     "url": "https://github.com/weike-zhang"
   },
-  "repository": "https://github.com/weike-zhang/grounded-ai-mentor",
+  "repository": "https://github.com/weike-zhang/grounded-ai-tutor",
   "license": "MIT",
   "keywords": ["education", "computer-science", "ai", "agent-skills", "project-based-learning"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Grounded AI Mentor",
-    "shortDescription": "Learn computing and AI through your real projects",
-    "longDescription": "A consent-aware mentor that defines hidden prerequisites, maps concepts across system layers, grounds claims in authorized project evidence, and checks understanding before advancing.",
+    "displayName": "Grounded AI Tutor",
+    "shortDescription": "Learn computing and AI from the first missing concept",
+    "longDescription": "A consent-aware tutor that starts without hidden prerequisites, explains how concepts fit together, uses authorized project evidence when helpful, and checks understanding before advancing.",
     "developerName": "Weike Zhang",
     "category": "Education",
     "capabilities": ["Read"],
@@ -22,8 +22,8 @@
     "logo": "./assets/mascot-transparent.png",
     "screenshots": ["./assets/social-preview.png", "./assets/before-after.png"],
     "defaultPrompt": [
-      "Use Grounded AI Mentor to explain what happens from clicking Login to receiving a result, without assuming I know the terms.",
-      "Use Grounded AI Mentor to help me understand this project before changing it."
+      "Use Grounded AI Tutor to explain what a port is without assuming I know the technical terms.",
+      "Use Grounded AI Tutor to help me understand this project before changing it."
     ]
   }
 }

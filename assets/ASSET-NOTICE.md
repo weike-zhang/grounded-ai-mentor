@@ -1,6 +1,6 @@
 # Visual asset notice
 
-The project author has confirmed the right to publish, modify and redistribute the flame mascot as part of Grounded AI Mentor.
+The project author has confirmed the right to publish, modify and redistribute the flame mascot as part of Grounded AI Tutor.
 
 The repository's MIT License covers code and documentation. It does **not** grant a separate license to reuse the mascot or mascot-derived visual assets outside this project. Those assets include:
 
@@ -12,4 +12,4 @@ The repository's MIT License covers code and documentation. It does **not** gran
 
 The transparent mascot preserves the supplied character artwork and removes only its connected near-white background. `scripts/process_mascot.py` documents that transformation, and `scripts/build_visuals.py` creates the repository graphics without redrawing the mascot.
 
-For reuse outside Grounded AI Mentor, contact the project author.
+For reuse outside Grounded AI Tutor, contact the project author.

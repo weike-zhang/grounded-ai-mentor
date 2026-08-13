@@ -2,22 +2,24 @@
 
 ## Recommended: Agent Skills CLI
 
+The public commands below become available after the authorized repository rename to `grounded-ai-tutor`. Until then, install from the current local checkout.
+
 ```bash
-npx skills add weike-zhang/grounded-ai-mentor \
-  --skill grounded-ai-mentor -g
+npx skills add weike-zhang/grounded-ai-tutor \
+  --skill grounded-ai-tutor -g
 ```
 
 Restart a host that discovers Skills only at startup, then test:
 
 ```text
-Use $grounded-ai-mentor to explain an HTTP request without assuming prior knowledge.
+Use $grounded-ai-tutor to explain an HTTP request without assuming prior knowledge.
 ```
 
 Update or remove the installed Skill with:
 
 ```bash
-npx skills update grounded-ai-mentor -g
-npx skills remove grounded-ai-mentor -g
+npx skills update grounded-ai-tutor -g
+npx skills remove grounded-ai-tutor -g
 ```
 
 ## Manual Codex installation
@@ -25,13 +27,13 @@ npx skills remove grounded-ai-mentor -g
 Clone the repository, then copy only the installable Skill folder:
 
 ```bash
-git clone https://github.com/weike-zhang/grounded-ai-mentor.git
+git clone https://github.com/weike-zhang/grounded-ai-tutor.git
 mkdir -p ~/.codex/skills
-cp -R grounded-ai-mentor/skills/grounded-ai-mentor \
-  ~/.codex/skills/grounded-ai-mentor
+cp -R grounded-ai-tutor/skills/grounded-ai-tutor \
+  ~/.codex/skills/grounded-ai-tutor
 ```
 
-Restart Codex and invoke `$grounded-ai-mentor` explicitly for the first check.
+Restart Codex and invoke `$grounded-ai-tutor` explicitly for the first check.
 
 ## Validate a checkout
 
@@ -49,7 +51,7 @@ The tests cover learner-state consent and sensitive-pattern semantics. The fixtu
 If the Skill was copied manually, review the exact path and remove only the installed Skill folder:
 
 ```bash
-rm -r ~/.codex/skills/grounded-ai-mentor
+rm -r ~/.codex/skills/grounded-ai-tutor
 ```
 
 The learner-state directory inside a project is separate and must not be removed unless the learner explicitly asks to delete it.

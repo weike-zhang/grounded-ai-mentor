@@ -2,22 +2,24 @@
 
 ## 推荐：Agent Skills CLI
 
+下面的公网命令要等远程仓库得到授权并改名为 `grounded-ai-tutor` 后才会生效。在此之前请从当前本地检出安装。
+
 ```bash
-npx skills add weike-zhang/grounded-ai-mentor \
-  --skill grounded-ai-mentor -g
+npx skills add weike-zhang/grounded-ai-tutor \
+  --skill grounded-ai-tutor -g
 ```
 
 如果客户端只在启动时发现 Skill，请重启，然后测试：
 
 ```text
-使用 $grounded-ai-mentor，在不预设技术基础的情况下解释 HTTP 请求。
+使用 $grounded-ai-tutor，在不预设技术基础的情况下解释 HTTP 请求。
 ```
 
 更新或卸载：
 
 ```bash
-npx skills update grounded-ai-mentor -g
-npx skills remove grounded-ai-mentor -g
+npx skills update grounded-ai-tutor -g
+npx skills remove grounded-ai-tutor -g
 ```
 
 ## Codex 手动安装
@@ -25,13 +27,13 @@ npx skills remove grounded-ai-mentor -g
 克隆仓库，只复制可安装的 Skill 文件夹：
 
 ```bash
-git clone https://github.com/weike-zhang/grounded-ai-mentor.git
+git clone https://github.com/weike-zhang/grounded-ai-tutor.git
 mkdir -p ~/.codex/skills
-cp -R grounded-ai-mentor/skills/grounded-ai-mentor \
-  ~/.codex/skills/grounded-ai-mentor
+cp -R grounded-ai-tutor/skills/grounded-ai-tutor \
+  ~/.codex/skills/grounded-ai-tutor
 ```
 
-重启 Codex，第一次使用时显式写出 `$grounded-ai-mentor`。
+重启 Codex，第一次使用时显式写出 `$grounded-ai-tutor`。
 
 ## 校验本地仓库
 
@@ -49,7 +51,7 @@ python evals/validate_fixtures.py
 如果之前是手动复制，先核对路径，再只删除已经安装的 Skill 文件夹：
 
 ```bash
-rm -r ~/.codex/skills/grounded-ai-mentor
+rm -r ~/.codex/skills/grounded-ai-tutor
 ```
 
 项目中的学习状态目录与 Skill 安装目录相互独立。只有学习者明确要求清空时才删除学习状态。

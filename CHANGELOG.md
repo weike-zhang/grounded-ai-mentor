@@ -1,19 +1,21 @@
 # Changelog
 
-## 0.1.2 — 2026-08-13
+## 0.2.0 — 2026-08-13
 
-- Rewrote both READMEs around recognizable learner problems, observable outcomes and a real teaching example before installation and protocol details.
+- Renamed the project and Skill from Grounded AI Mentor to Grounded AI Tutor so the name states the lasting teaching role instead of one project-grounded feature.
+- Reframed both READMEs around the tutor's core behavior: finding the first missing prerequisite and teaching from zero assumptions. Real project evidence is now presented as an optional teaching mode.
+- Reordered both READMEs so a visitor sees the tutor's port-learning comparison and first-missing-prerequisite behavior before the optional project-evidence mode and detailed teaching protocol.
 - Reframed both pilot comparison visuals around the shared port-learning task instead of internal behavior labels.
-- Separate sensitive-data scan results from consent and persistence authorization.
-- Remove the misleading `safe_to_share` result and add regression tests for consent and redaction semantics.
-- Run state-validator tests in CI and align the plugin manifest with the public release version.
-- Add a real-project teaching comparison that exercises file-based evidence rather than only a generic concept explanation.
+- Separated sensitive-data scan results from consent and persistence authorization.
+- Removed the misleading `safe_to_share` result and added regression tests for consent and redaction semantics.
+- Added state-validator tests to CI and aligned the plugin manifest with the public release version.
+- Added a real-project teaching comparison that exercises file-based evidence rather than only a generic concept explanation.
 
 ## 0.1.1 — 2026-08-12
 
 - Recorded the exact pilot prompt with complete sanitized outputs and explicit limitations.
 - Published `grounded-ai-mentor-v0.1.1.zip` as the Release asset.
-- The tagged plugin manifest still reported `0.1.0`; v0.1.2 corrects the metadata and records this release-history limitation.
+- The tagged plugin manifest still reported `0.1.0`; v0.2.0 corrects the metadata and records this release-history limitation.
 
 ## 0.1.0 — 2026-08-12
 

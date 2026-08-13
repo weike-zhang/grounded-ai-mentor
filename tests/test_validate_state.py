@@ -7,11 +7,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "skills" / "grounded-ai-mentor" / "scripts" / "validate_state.py"
+SCRIPT = ROOT / "skills" / "grounded-ai-tutor" / "scripts" / "validate_state.py"
 TEMPLATE = (
     ROOT
     / "skills"
-    / "grounded-ai-mentor"
+    / "grounded-ai-tutor"
     / "references"
     / "learner-profile-template.md"
 )

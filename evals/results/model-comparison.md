@@ -21,7 +21,7 @@ Status: **one transparent pilot pair; not a benchmark**.
 ## Published outputs
 
 - [Baseline response](pilot/baseline-misunderstanding.md)
-- [Response with Grounded AI Mentor](pilot/with-skill-misunderstanding.md)
+- [Response with Grounded AI Tutor](pilot/with-skill-misunderstanding.md)
 
 ## What was observed
 

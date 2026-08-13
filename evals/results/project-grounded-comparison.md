@@ -6,13 +6,13 @@ Status: **one transparent project-grounded pair; not a benchmark**.
 - Runtime: isolated Codex subagents using the same inherited session model; exact deployment identifier was not exposed
 - Scenario: explain why a real release-bundle implementation must handle symlinks before reading file bytes
 - Project evidence: the current `launch-github-project` bundle builder, regression tests and self-audit case
-- Conditions: read-only and ephemeral; the baseline did not load Grounded AI Mentor, while the treatment loaded `SKILL.md` and `teaching-protocol.md`
+- Conditions: read-only and ephemeral; the baseline did not load Grounded AI Tutor, while the treatment loaded `SKILL.md` and `teaching-protocol.md`
 - Sanitization: machine-specific checkout paths were replaced with repository-relative links and commands
 
 ## Published outputs
 
 - [Baseline response](pilot/baseline-project-bundle-safety.md)
-- [Response with Grounded AI Mentor](pilot/with-skill-project-bundle-safety.md)
+- [Response with Grounded AI Tutor](pilot/with-skill-project-bundle-safety.md)
 
 ## Exact sanitized prompt
 

@@ -1,9 +1,9 @@
 ---
-name: grounded-ai-mentor
-description: Teach computer science, software engineering, web systems, data, cloud, and AI from zero assumptions by grounding explanations in a learner's real, authorized project materials. Use when a user wants concepts explained from first principles, wants to understand code or architecture, asks for a learning or career route, says an explanation is too advanced, or wants durable learning progress recorded with consent. Distinguish explanation, diagnosis, and implementation; do not use for ordinary coding tasks that do not ask for teaching.
+name: grounded-ai-tutor
+description: Teach computer science, software engineering, web systems, data, cloud, and AI from zero assumptions, using a learner's authorized project materials only when they improve the lesson. Use when a user wants concepts explained from first principles, wants to understand code or architecture, asks for a learning or career route, says an explanation is too advanced, or wants durable learning progress recorded with consent. Distinguish explanation, diagnosis, and implementation; do not use for ordinary coding tasks that do not ask for teaching.
 ---
 
-# Grounded AI Mentor
+# Grounded AI Tutor
 
 Build usable system judgment, not vocabulary recall. Start from the user's current question and use real project evidence only when it improves learning.
 
@@ -64,7 +64,7 @@ Preserve correct reasoning, identify the earliest meaningful gap, repair only th
 
 ## Manage learner state with consent
 
-Read [references/privacy-rules.md](references/privacy-rules.md) before creating or changing learner state. Use `.grounded-ai-mentor/learner-profile.md` in the learner's project only after explicit consent. Start from [references/learner-profile-template.md](references/learner-profile-template.md).
+Read [references/privacy-rules.md](references/privacy-rules.md) before creating or changing learner state. Use `.grounded-ai-tutor/learner-profile.md` in the learner's project only after explicit consent. Start from [references/learner-profile-template.md](references/learner-profile-template.md).
 
 - Separate confirmed facts, shared inferences, and unknowns.
 - Record only stable information useful to future teaching.
