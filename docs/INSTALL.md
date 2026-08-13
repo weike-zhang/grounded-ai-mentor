@@ -38,10 +38,11 @@ Restart Codex and invoke `$grounded-ai-mentor` explicitly for the first check.
 From the repository root:
 
 ```bash
+python -m unittest discover -s tests -v
 python evals/validate_fixtures.py
 ```
 
-This validates fixture structure and release files. It does not score model behavior.
+The tests cover learner-state consent and sensitive-pattern semantics. The fixture command validates release structure; neither command scores model behavior or grants permission to persist or share learner state.
 
 ## Manual uninstall
 

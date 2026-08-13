@@ -21,6 +21,10 @@ REQUIRED_FILES = [
     "assets/social-preview.png",
     "assets/teaching-flow.svg",
     "examples/project-grounded-session.md",
+    "tests/test_validate_state.py",
+    "evals/results/project-grounded-comparison.md",
+    "evals/results/pilot/baseline-project-bundle-safety.md",
+    "evals/results/pilot/with-skill-project-bundle-safety.md",
 ]
 
 
@@ -51,7 +55,7 @@ def main() -> int:
     passed = sum(checks.values())
     result = {
         "suite": "grounded-ai-mentor-fixture-integrity",
-        "version": "0.1.0",
+        "version": "0.1.2",
         "checks": checks,
         "passed_checks": passed,
         "total_checks": len(checks),

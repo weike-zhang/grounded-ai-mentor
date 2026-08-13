@@ -154,12 +154,16 @@ def build_comparisons() -> None:
     )
     comparison_card(
         ROOT / "assets" / "before-after.zh-CN.png",
-        title="公开探索性案例中发生了什么变化",
-        subtitle="一组完整脱敏输出已经公开，可通过 README 链接复核",
-        left_label="基线回答",
-        right_label="启用 Grounded AI Mentor",
-        left_text="• 解释准确\n• 命令只读且安全\n• 要求进行真实观察",
-        right_text="• 明确最早前置概念\n• 先给完整系统路径\n• 标注通用示例\n• 观察前先要求预测",
+        title="同一个“端口”问题，学习过程有什么不同",
+        subtitle="基线回答已经准确；这里展示 Skill 增加的学习步骤",
+        left_label="普通回答",
+        right_label="启用导师 Skill",
+        left_text="• 直接解释端口\n• 给出安全的只读命令\n• 请用户观察结果",
+        right_text=(
+            "• 先补“正在运行的程序”\n"
+            "• 先画出数据到程序的路径\n"
+            "• 观察前预测，观察后定位"
+        ),
         cjk=True,
     )
 

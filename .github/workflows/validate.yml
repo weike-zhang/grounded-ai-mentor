@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Run state-validator regression tests
+        run: python -m unittest discover -s tests -v
       - name: Validate fixture and release integrity
         run: python evals/validate_fixtures.py
       - name: Validate JSON documents

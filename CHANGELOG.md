@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+- Rewrote the Chinese README around recognizable learner problems, observable outcomes and a real teaching example before installation and protocol details.
+- Reframed the Chinese pilot comparison visual around the shared port-learning task instead of internal behavior labels.
+
+## 0.1.2 — 2026-08-13
+
+- Separate sensitive-data scan results from consent and persistence authorization.
+- Remove the misleading `safe_to_share` result and add regression tests for consent and redaction semantics.
+- Run state-validator tests in CI and align the plugin manifest with the public release version.
+- Add a real-project teaching comparison that exercises file-based evidence rather than only a generic concept explanation.
+
 ## 0.1.0 — 2026-08-12
 
 - Added the zero-assumption, project-grounded teaching protocol.

@@ -38,10 +38,11 @@ cp -R grounded-ai-mentor/skills/grounded-ai-mentor \
 在仓库根目录运行：
 
 ```bash
+python -m unittest discover -s tests -v
 python evals/validate_fixtures.py
 ```
 
-它只验证夹具结构和发布文件，不给模型行为评分。
+测试覆盖学习状态的授权和敏感信息语义；夹具命令验证发布结构。两者都不给模型行为评分，也不代表已经获得持久化或分享学习状态的授权。
 
 ## 手动卸载
 

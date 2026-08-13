@@ -45,7 +45,9 @@ In the published pilot, the baseline was already accurate and safe. With the Ski
 - label generic examples instead of implying project evidence;
 - ask for a prediction before a safe observation.
 
-Read the [complete sanitized responses and limitations](evals/results/model-comparison.md). One pair is a transparent example, not a benchmark or proof of learning gains.
+Read the [complete sanitized responses and limitations](evals/results/model-comparison.md). Each pair is a transparent example, not a benchmark or proof of learning gains.
+
+A second read-only comparison uses a real release-bundle implementation, regression tests and a documented security failure. Both conditions were strong; the Skill made the system path more explicit but did not show a material accuracy advantage. Read the [project-grounded comparison](evals/results/project-grounded-comparison.md). Publishing this limitation is part of the evidence standard.
 
 ## How it works
 
@@ -67,7 +69,7 @@ The Skill does not turn a learning request into a code change, invent a plausibl
 | Skill structure | Verified | Skill validator and CI |
 | Skills CLI discovery | Verified | Repository discovery on 2026-08-12 |
 | Codex plugin manifest | Verified locally | Manifest validation |
-| Live teaching behavior | Pilot only | One complete baseline/Skill pair |
+| Live teaching behavior | Exploratory only | Two complete pairs; one uses exact project files |
 | Other Agent Skills hosts | Unverified | Community compatibility reports welcome |
 
 Run the release-integrity checks:
@@ -86,12 +88,14 @@ The public repository contains fictional examples and a blank learner-profile te
 .grounded-ai-mentor/learner-profile.md
 ```
 
-That path is ignored by default. Learners can view, correct, export or delete their state. Validate a profile before sharing it:
+That path is ignored by default. Learners can view, correct, export or delete their state. Scan a profile before persistence or a sharing review:
 
 ```bash
 python skills/grounded-ai-mentor/scripts/validate_state.py \
   .grounded-ai-mentor/learner-profile.md
 ```
+
+A clean scan reports structure and configured sensitive-data patterns. It does not grant permission to persist or share the profile; both actions still require the learner's explicit authorization.
 
 Read [PRIVACY.md](PRIVACY.md) before enabling persistence.
 

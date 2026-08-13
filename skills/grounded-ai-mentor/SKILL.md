@@ -71,7 +71,7 @@ Read [references/privacy-rules.md](references/privacy-rules.md) before creating 
 - Never record credentials, contact details, identifiers, exact address, health data, account data, or unnecessary sensitive information.
 - Show what will be recorded before the first write when practical.
 - Support requests to view, export, correct, or delete the state.
-- Run `python scripts/validate_state.py <profile>` after writing or before sharing a profile.
+- Run `python scripts/validate_state.py <profile>` after writing or before reviewing a profile for sharing. A clean scan means only that its structure passed and no configured sensitive pattern was detected; it does not authorize persistence or sharing.
 
 ## Route curriculum
 
