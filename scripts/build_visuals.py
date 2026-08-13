@@ -140,16 +140,19 @@ def comparison_card(
 def build_comparisons() -> None:
     comparison_card(
         ROOT / "assets" / "before-after.png",
-        title="What changed in the transparent pilot",
-        subtitle="One published pilot pair — full sanitized outputs linked below",
-        left_label="Baseline",
-        right_label="With Grounded AI Mentor",
-        left_text="• Accurate explanation\n• Safe read-only command\n• Observation requested",
+        title="Same port question, different learning path",
+        subtitle="The baseline was already correct; this shows the extra learning steps",
+        left_label="Regular answer",
+        right_label="With mentor Skill",
+        left_text=(
+            "• Explains ports directly\n"
+            "• Gives a safe read-only command\n"
+            "• Asks the learner to inspect output"
+        ),
         right_text=(
-            "• Earliest prerequisite named\n"
-            "• System path shown first\n"
-            "• Generic example labelled\n"
-            "• Prediction before observation"
+            "• First repairs “running program”\n"
+            "• Maps data to the program\n"
+            "• Predicts before, locates after"
         ),
     )
     comparison_card(
