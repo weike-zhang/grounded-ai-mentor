@@ -70,8 +70,9 @@ class PublicMaterialsTests(unittest.TestCase):
         english = self.read("README.md")
         chinese = self.read("README.zh-CN.md")
 
-        self.assertIn("one exploratory pair, not a benchmark", english)
-        self.assertIn("no material accuracy advantage", english)
+        self.assertIn("two answers to one prompt", english)
+        self.assertIn("not a benchmark", english)
+        self.assertIn("did not make the answer clearly more accurate", english)
         self.assertIn("不是基准测试", chinese)
         self.assertIn("没有表现出实质性的准确性优势", chinese)
 
@@ -93,6 +94,46 @@ class PublicMaterialsTests(unittest.TestCase):
         for command in spec["install_or_update"]:
             self.assertIn(command, page)
         self.assertIn(spec["release_asset"], page)
+
+    def test_english_readme_uses_questions_a_learner_would_ask(self):
+        english = self.read("README.md")
+
+        self.assertIn("## Start where the explanation lost you", english)
+        self.assertIn("You mentioned processes and sockets", english)
+        self.assertIn("something safe I can check on my computer", english)
+        self.assertIn("shows the few files and steps", english)
+        self.assertIn("one quick way to check that you understood it", english)
+
+        stale_phrases = [
+            "repairs that layer",
+            "Return to the earliest missing prerequisite",
+            "locate-the-parts check",
+            "Start with the concept that lost you",
+            "trace a compact path through the evidence",
+            "one proportionate check of understanding",
+            "places it in the hardware",
+            "grounds project claims",
+            "proportionate restate",
+        ]
+        for phrase in stale_phrases:
+            self.assertNotIn(phrase, english)
+
+    def test_english_visuals_explain_the_learning_result_in_plain_words(self):
+        source = self.read("scripts/build_visuals.py")
+        flow = self.read("assets/teaching-flow.svg")
+
+        self.assertIn("Explains why programs need ports", source)
+        self.assertIn("Find what the learner missed", flow)
+        self.assertIn("Check understanding", flow)
+        for phrase in (
+            "First repairs",
+            "Predicts before, locates after",
+            "2. Evidence",
+            "3. Foundation",
+            "restate, predict",
+            "observe, transfer",
+        ):
+            self.assertNotIn(phrase, source + flow)
 
 
 if __name__ == "__main__":

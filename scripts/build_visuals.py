@@ -135,19 +135,19 @@ def comparison_card(
 def build_comparisons() -> None:
     comparison_card(
         ROOT / "assets" / "before-after.png",
-        title="Same port question, different learning path",
-        subtitle="The baseline was already correct; this shows the extra learning steps",
+        title="The same port question, with the missing step added",
+        subtitle="The first answer was correct. The Tutor adds the missing idea and a check.",
         left_label="Regular answer",
-        right_label="With tutor Skill",
+        right_label="With Grounded AI Tutor",
         left_text=(
             "• Explains ports directly\n"
             "• Gives a safe read-only command\n"
             "• Asks the learner to inspect output"
         ),
         right_text=(
-            "• First repairs “running program”\n"
-            "• Maps data to the program\n"
-            "• Predicts before, locates after"
+            "• Explains why programs need ports\n"
+            "• Shows where incoming data goes\n"
+            "• Asks you to predict, then find it"
         ),
     )
     comparison_card(

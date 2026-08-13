@@ -1,38 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
   <title id="title">Grounded AI Tutor teaching flow</title>
-  <desc id="desc">Evidence and intent flow through prerequisite teaching, system mapping, understanding checks, and consent-based local memory.</desc>
+  <desc id="desc">The Tutor understands the question, checks what is known, explains the missing idea, checks understanding, and saves notes only with permission.</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0 0l8 4-8 4Z" fill="#F24B22"/>
     </marker>
     <style>
-      .box{fill:#fff;stroke:#D8DEE9;stroke-width:2}.accent{fill:#FFF3E8;stroke:#F24B22;stroke-width:2}.t{font:600 24px system-ui,sans-serif;fill:#162033}.s{font:16px system-ui,sans-serif;fill:#516070}.line{stroke:#F24B22;stroke-width:3;marker-end:url(#arrow)}
+      .box{fill:#fff;stroke:#D8DEE9;stroke-width:2}.accent{fill:#FFF3E8;stroke:#F24B22;stroke-width:2}.h{font:600 24px system-ui,sans-serif;fill:#162033}.t{font:600 19px system-ui,sans-serif;fill:#162033}.s{font:14px system-ui,sans-serif;fill:#516070}.line{stroke:#F24B22;stroke-width:3;marker-end:url(#arrow)}
     </style>
   </defs>
   <rect width="1200" height="330" rx="28" fill="#F7F9FC"/>
-  <text x="60" y="58" class="t">Teach from what is real, then verify what was understood.</text>
+  <text x="60" y="58" class="h">Find what the learner missed. Check understanding before moving on.</text>
   <g transform="translate(55 105)">
     <rect class="box" width="190" height="145" rx="18"/>
-    <text x="22" y="48" class="t">1. Intent</text><text x="22" y="80" class="s">learn / diagnose</text><text x="22" y="106" class="s">plan / change</text>
+    <text x="22" y="48" class="t">1. Your goal</text><text x="22" y="80" class="s">learn / find a problem</text><text x="22" y="106" class="s">plan / change</text>
   </g>
   <line x1="250" y1="178" x2="285" y2="178" class="line"/>
   <g transform="translate(290 105)">
     <rect class="accent" width="190" height="145" rx="18"/>
-    <text x="22" y="48" class="t">2. Evidence</text><text x="22" y="80" class="s">files, logs, UI</text><text x="22" y="106" class="s">or explicit inference</text>
+    <text x="22" y="48" class="t">2. What is known</text><text x="22" y="80" class="s">files, logs, screens</text><text x="22" y="106" class="s">or a general example</text>
   </g>
   <line x1="485" y1="178" x2="520" y2="178" class="line"/>
   <g transform="translate(525 105)">
     <rect class="box" width="190" height="145" rx="18"/>
-    <text x="22" y="48" class="t">3. Foundation</text><text x="22" y="80" class="s">first missing idea</text><text x="22" y="106" class="s">inside system map</text>
+    <text x="22" y="48" class="t">3. Missing step</text><text x="22" y="80" class="s">first missing idea</text><text x="22" y="106" class="s">explain it first</text>
   </g>
   <line x1="720" y1="178" x2="755" y2="178" class="line"/>
   <g transform="translate(760 105)">
     <rect class="accent" width="190" height="145" rx="18"/>
-    <text x="22" y="48" class="t">4. Check</text><text x="22" y="80" class="s">restate, predict</text><text x="22" y="106" class="s">observe, transfer</text>
+    <text x="22" y="48" class="t">4. Check it</text><text x="22" y="80" class="s">ask one question</text><text x="22" y="106" class="s">or give a safe check</text>
   </g>
   <line x1="955" y1="178" x2="990" y2="178" class="line"/>
   <g transform="translate(995 105)">
     <rect class="box" width="150" height="145" rx="18"/>
-    <text x="20" y="48" class="t">5. Save?</text><text x="20" y="80" class="s">local only</text><text x="20" y="106" class="s">with consent</text>
+    <text x="20" y="48" class="t">5. Save notes?</text><text x="20" y="80" class="s">on this computer</text><text x="20" y="106" class="s">with permission</text>
   </g>
 </svg>
