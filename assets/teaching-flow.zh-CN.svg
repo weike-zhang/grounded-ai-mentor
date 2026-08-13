@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
-  <title id="title">Grounded AI Mentor 中文教学流程</title>
+  <title id="title">Grounded AI Tutor 中文教学流程</title>
   <desc id="desc">从意图和证据出发，找到最早前置概念，验证理解，并只在获得同意时保存本地状态。</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">

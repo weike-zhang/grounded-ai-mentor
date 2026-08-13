@@ -1,6 +1,6 @@
 # Learner profile
 
-This file is local learner state. Keep it under `.grounded-ai-mentor/learner-profile.md` and out of Git.
+This file is local learner state. Keep it under `.grounded-ai-tutor/learner-profile.md` and out of Git.
 
 ## Consent
 

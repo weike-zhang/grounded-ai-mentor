@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a local Grounded AI Mentor learner profile without echoing secrets."""
+"""Validate a local Grounded AI Tutor learner profile without echoing secrets."""
 
 from __future__ import annotations
 
@@ -40,13 +40,21 @@ def validate(path: Path) -> dict[str, object]:
             re.I,
         )
     )
+    contains_no_detected_sensitive_data = not findings
     return {
         "path": str(path),
         "valid_structure": not missing,
         "missing_headings": missing,
         "consent_marked_granted": consent_granted,
         "sensitive_findings": findings,
-        "safe_to_share": not missing and not findings,
+        "contains_no_detected_sensitive_data": contains_no_detected_sensitive_data,
+        "valid_for_persistence": not missing
+        and consent_granted
+        and contains_no_detected_sensitive_data,
+        "note": (
+            "A clean scan does not grant permission to persist or share the profile. "
+            "Those actions still require the learner's explicit authorization."
+        ),
     }
 
 
@@ -64,8 +72,13 @@ def main() -> int:
         print(f"Structure: {'PASS' if result['valid_structure'] else 'FAIL'}")
         print(f"Consent marked granted: {result['consent_marked_granted']}")
         print(f"Sensitive findings: {len(result['sensitive_findings'])}")
-        print(f"Safe to share: {result['safe_to_share']}")
-    return 0 if result["safe_to_share"] else 1
+        print(
+            "No detected sensitive data: "
+            f"{result['contains_no_detected_sensitive_data']}"
+        )
+        print(f"Valid for persistence: {result['valid_for_persistence']}")
+        print(result["note"])
+    return 0 if result["valid_structure"] and result["contains_no_detected_sensitive_data"] else 1
 
 
 if __name__ == "__main__":

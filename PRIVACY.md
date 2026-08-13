@@ -1,8 +1,8 @@
 # Privacy
 
-Grounded AI Mentor works without persistent learner state.
+Grounded AI Tutor works without persistent learner state.
 
-If the learner explicitly opts in, the Skill stores a Markdown profile under `.grounded-ai-mentor/learner-profile.md` in the current project. The directory is ignored by the repository template and is not uploaded automatically.
+If the learner explicitly opts in, the Skill stores a Markdown profile under `.grounded-ai-tutor/learner-profile.md` in the current project. The directory is ignored by the repository template and is not uploaded automatically.
 
 The profile may contain only information that is stable and useful for future teaching: preferred language, learning goal, authorized project paths, demonstrated understanding, voluntarily shared constraints, and progress evidence.
 

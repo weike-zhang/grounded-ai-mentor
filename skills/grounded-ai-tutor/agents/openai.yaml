@@ -1,0 +1,7 @@
+interface:
+  display_name: "Grounded AI Tutor"
+  short_description: "从缺失的前置概念开始学习计算机、软件工程与 AI"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/mascot-transparent.png"
+  brand_color: "#F24B22"
+  default_prompt: "Use $grounded-ai-tutor to explain this concept without assuming prior technical knowledge, and use my project only if it helps."
